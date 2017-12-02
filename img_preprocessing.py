@@ -8,9 +8,8 @@ ORI_PATH = "3D_images"
 def file_name(t, z):
     return "t={:02d}_z={:03d}.jpg".format(t, z)
 
-def bgrtogray():
 
-def denoise(input_path , output_path):
+def denoise(input_path, output_path):
     image = cv2.imread(input_path)
     # dst = cv2.fastNlMeansDenoising(img, None, 10, 7, 21)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -36,4 +35,4 @@ if __name__ == '__main__':
             input_path = "{}/{}".format(ORI_PATH, file_name(t, z))
             print(input_path)
             output_path = "{}/{}/{}".format(output_dir, t, file_name(t, z))
-            denoise(input_path , output_path)
+            denoise(input_path, output_path)

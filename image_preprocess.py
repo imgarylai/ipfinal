@@ -1,6 +1,7 @@
 from PIL import Image, ImageOps
 import cv2
 import os.path
+from tqdm import tqdm
 
 ORI_PATH = "3D_images"
 
@@ -51,7 +52,7 @@ def denoise(filepath, output_path):
     cv2.imwrite(output_path, thresh)
 
 if __name__ == '__main__':
-  for t in range(1, 21):
+  for t in tqdm(range(1, 21)):
     output_path = "denoise"
     if not os.path.exists(output_path):
       os.mkdir(output_path)

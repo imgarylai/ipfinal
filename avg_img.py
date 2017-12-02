@@ -20,4 +20,4 @@ if __name__ == '__main__':
 
         out = average_img(imlist)
 
-        out.save("{}/t{}.jpg".format(AVG_PATH, i))
+        out.save("{}/t{:02d}.jpg".format(AVG_PATH, i))

@@ -32,5 +32,6 @@ if __name__ == '__main__':
     for t in tqdm(range(1, 21)):
         for z in range(1, 101):
             input_path = "{}/{}".format(ORI_PATH, file_name(t, z))
+            print(input_path)
             output_path = "{}/{}".format(output_dir, file_name(t, z))
             denoise(input_path , output_path)
